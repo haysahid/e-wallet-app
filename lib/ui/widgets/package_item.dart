@@ -4,16 +4,16 @@ import 'package:flutter/material.dart';
 import '../../shared/theme.dart';
 
 class PackageItem extends StatelessWidget {
+  final int amount;
+  final int price;
+  final bool isSelected;
+
   const PackageItem({
     super.key,
     required this.amount,
     required this.price,
     this.isSelected = false,
   });
-
-  final int amount;
-  final int price;
-  final bool isSelected;
 
   @override
   Widget build(BuildContext context) {

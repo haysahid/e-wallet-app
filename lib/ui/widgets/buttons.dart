@@ -3,6 +3,11 @@ import 'package:flutter/material.dart';
 import '../../shared/theme.dart';
 
 class CustomFilledButton extends StatelessWidget {
+  final String title;
+  final double width;
+  final double height;
+  final VoidCallback? onPressed;
+
   const CustomFilledButton({
     super.key,
     required this.title,
@@ -10,11 +15,6 @@ class CustomFilledButton extends StatelessWidget {
     this.height = 50,
     this.onPressed,
   });
-
-  final String title;
-  final double width;
-  final double height;
-  final VoidCallback? onPressed;
 
   @override
   Widget build(BuildContext context) {

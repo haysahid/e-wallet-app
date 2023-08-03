@@ -2,16 +2,16 @@ import 'package:bank_sha/shared/theme.dart';
 import 'package:flutter/material.dart';
 
 class DataProviderItem extends StatelessWidget {
+  final String name;
+  final String imageUrl;
+  final bool isSelected;
+
   const DataProviderItem({
     super.key,
     required this.name,
     required this.imageUrl,
     this.isSelected = false,
   });
-
-  final String name;
-  final String imageUrl;
-  final bool isSelected;
 
   @override
   Widget build(BuildContext context) {

@@ -2,6 +2,11 @@ import 'package:bank_sha/shared/theme.dart';
 import 'package:flutter/material.dart';
 
 class HomeLatestTransactionItem extends StatelessWidget {
+  final String iconUrl;
+  final String title;
+  final String time;
+  final String value;
+
   const HomeLatestTransactionItem({
     super.key,
     required this.iconUrl,
@@ -9,11 +14,6 @@ class HomeLatestTransactionItem extends StatelessWidget {
     required this.time,
     required this.value,
   });
-
-  final String iconUrl;
-  final String title;
-  final String time;
-  final String value;
 
   @override
   Widget build(BuildContext context) {

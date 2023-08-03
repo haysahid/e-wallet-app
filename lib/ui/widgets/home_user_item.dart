@@ -2,14 +2,14 @@ import 'package:bank_sha/shared/theme.dart';
 import 'package:flutter/material.dart';
 
 class HomeUserItem extends StatelessWidget {
+  final String imageUrl;
+  final String username;
+
   const HomeUserItem({
     super.key,
     required this.imageUrl,
     required this.username,
   });
-
-  final String imageUrl;
-  final String username;
 
   @override
   Widget build(BuildContext context) {

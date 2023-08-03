@@ -2,16 +2,16 @@ import 'package:bank_sha/shared/theme.dart';
 import 'package:flutter/material.dart';
 
 class BankItem extends StatelessWidget {
+  final String title;
+  final String imageUrl;
+  final bool isSelected;
+
   const BankItem({
     super.key,
     required this.title,
     required this.imageUrl,
     this.isSelected = false,
   });
-
-  final String title;
-  final String imageUrl;
-  final bool isSelected;
 
   @override
   Widget build(BuildContext context) {

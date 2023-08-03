@@ -3,16 +3,16 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class HomeTipsItem extends StatelessWidget {
+  final String imageUrl;
+  final String title;
+  final String url;
+
   const HomeTipsItem({
     super.key,
     required this.imageUrl,
     required this.title,
     required this.url,
   });
-
-  final String imageUrl;
-  final String title;
-  final String url;
 
   @override
   Widget build(BuildContext context) {

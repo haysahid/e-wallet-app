@@ -2,6 +2,11 @@ import 'package:bank_sha/shared/theme.dart';
 import 'package:flutter/material.dart';
 
 class TransferRecentUserItem extends StatelessWidget {
+  final String imageUrl;
+  final String name;
+  final String username;
+  final bool isVerified;
+
   const TransferRecentUserItem({
     super.key,
     required this.imageUrl,
@@ -9,11 +14,6 @@ class TransferRecentUserItem extends StatelessWidget {
     required this.username,
     this.isVerified = false,
   });
-
-  final String imageUrl;
-  final String name;
-  final String username;
-  final bool isVerified;
 
   @override
   Widget build(BuildContext context) {
