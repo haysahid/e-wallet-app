@@ -5,8 +5,7 @@ import 'package:bank_sha/services/auth_service.dart';
 import 'package:bank_sha/services/user_service.dart';
 import 'package:bank_sha/services/wallet_service.dart';
 import 'package:equatable/equatable.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:bloc/bloc.dart';
 
 import '../../models/sign_in_form_model.dart';
 
@@ -122,6 +121,18 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
           emit(AuthInitial());
         } catch (e) {
           emit(AuthFailed(e.toString()));
+        }
+      }
+
+      if (event is AuthUpdateBalance) {
+        if (state is AuthSuccess) {
+          final currentUser = (state as AuthSuccess).user;
+
+          final updatedUser = currentUser.copyWith(
+            balance: currentUser.balance! + event.amount,
+          );
+
+          emit(AuthSuccess(updatedUser));
         }
       }
     });
